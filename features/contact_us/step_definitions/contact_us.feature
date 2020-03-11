@@ -1,158 +1,61 @@
 Feature: testar o envio de mensagem
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Customer Service"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-  Then clicar no botão "Send" e retornar a mensagem de erro
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-  Then clicar no botão "Send" e retornar a mensagem de erro
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e eviar a mensagem com sucesso
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e enviar a mensagem
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e eviar a mensagem com sucesso
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Customer Service"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e enviar a mensagem
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "--Choose--"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e retornar a mensagem de erro
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e eviar a mensagem com sucesso
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Customer Service"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-    And Clicar no campo "Attach File" e selecionar uma imagem
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e enviar a mensagem
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "--Choose--"
-    And clicar no campo "Email address" e não preencher o campo
-    And clicar no campo "Order reference" e inserir "00312"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e retornar a mensagem de erro
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e eviar a mensagem com sucesso
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Customer Service"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e não preencher o campo
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e enviar a mensagem
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Customer Service"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-    And Clicar no campo "Attach File" e selecionar uma música
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e retornara mensagem de erro
-
-Scenario: Deixar o campo de "Email address" vermelho
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Customer Service"
-    And clicar no campo "Email address" e inserir "rael33hotmail.com"
-  Then campo de "Email address" em vermelho
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "rael33hotmail.com"
-    And clicar no campo "Order reference" e inserir "00312"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e retornara mensagem de erro
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar a mensagem
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir '""'
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e enviar a mensagem
-
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar a mensagem
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "1234"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Papagaio viajou pelo mundo."
-  Then clicar no botão "Send" e enviar a mensagem
   
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar a mensagem
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "1234"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "xce3456gfdxce3456gfdxce3456gfdxce3456gfdxce3456gfd1"
-  Then clicar no botão "Send" e enviar a mensagem
+  @contactus @contato01 @erro
+  Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
+    Given que eu esteja na home
+    When eu clicar em Contact us
+      And clicar na seta em Subject Heading e selecionar a opção Customer Service
+      And clicar no campo Email address e inserir rael33@hotmail.com
+      And clicar no campo Order reference e inserir 00312
+    Then clicar no botão Send e retornar a mensagem de erro The message cannot be blank.
 
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar a mensagem
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "xce3456gfdxce3456gfdxce3456gfdxce3456gfdxce3456gfd1"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e enviar a mensagem
+  @contactus @contato02 @erro
+  Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
+    Given eu esteja na home
+    When clicar em Contact us
+      And clicar na seta em Subject Heading e selecionar a opção Webmaster
+      And clicar em Email address e inserir rael33@hotmail.com
+      And clicar em campo Order reference e inserir 00312
+    Then clicar em Send e retornar a mensagem de erro The message cannot be blank.
+ 
+  @contactus @contato03 @enviado
+  Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar com sucesso
+    Given esteja na home
+    When clicar em Contact us no header
+      And clicar na seta em Subject Heading e selecionar Webmaster
+      And clicar na caixa de Email address e inserir rael33@hotmail.com
+      And clicar na caixa de Order reference e inserir 00312
+      And clicar em mensagem e escrever Ocorreu um problema técnico no site.
+    Then clicar em Send e retornar a mensagem de enviado
 
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar a mensagem
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar na seta em "Subject Heading" e selecionar a opção "Webmaster"
-    And clicar no campo "Email address" e inserir "xce3456gfdxce3456gfdxce3456gfdxce3456gfdxce3456gfd1@hotmail.com"
-    And clicar no campo "Order reference" e inserir "1234"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e enviar a mensagem
+  @contactus @contato04 @enviado
+  Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar com sucesso
+    Given na home
+    When no header clicar em Contact us
+      And clicar na seta em Subject Heading e selecionar Customer Service
+      And na caixa de Email address e inserir rael33@hotmail.com
+      And na caixa de Order reference e inserir 00312
+      And em mensagem e escrever Ocorreu um problema técnico no site.
+    Then clicar em Send e retornar a mensagem de enviado com sucesso
 
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e retornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-  Then clicar no botão "Send" e retornar a mensagem de erro
+  @contactus @contato05 @erro
+  Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar com sucesso
+    Given que esta na home
+    When em header clicar em Contact us
+      And clicar na seta em Subject Heading e selecionar --Choose--
+      And no campo de Email address inserir rael33@hotmail.com
+      And no campo Order reference inserir 00312
+      And na caixa de mensagem e escrever Ocorreu um problema técnico no site.
+    Then clicar em Send e retornar a mensagem de erro Please select a subject from the list provided.
 
-Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e rotornar erro
-  Given que eu esteja na home
-  When eu clicar em "Contact us"
-    And clicar no campo "Email address" e inserir "rael33@hotmail.com"
-    And clicar no campo "Order reference" e inserir "1234"
-    And Clicar no campo "Message" e digitar a seguinte mensagem "Ocorreu um problema técnico no site."
-  Then clicar no botão "Send" e retornar a mensagem de erro
-
+  @contactus @contato06 @enviado
+  Scenario: Enviar uma mensagem na parte "CUSTOMER SERVICE - CONTACT US" e enviar com sucesso
+    Given estar na home
+    When em header clicar no campo de Contact us
+      And clicar na seta em Subject Heading e selecionar a opção Customer service
+      And no campo Email address inserir rael33@hotmail.com
+      And na caixa Order reference inserir 00312
+      And na caixa de mensagem clicar e escrever Ocorreu um problema técnico no site.
+      And clicar em Attach File e colocar uma imagem
+    Then clicar em Send e retornar a mensagem de envio
 
