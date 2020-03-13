@@ -13,4 +13,5 @@ class ContactUs < SitePrism::Page
   element :send, :xpath, '//*[@id="submitMessage"]'
   element :menerror, :xpath, '//*[@id="center_column"]/div'
   element :mensucess, :xpath, '//*[@id="center_column"]/p'
+  element :vermelho, :css, '.form-group.form-error input, .form-group.form-error textarea'
 end
